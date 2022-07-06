@@ -8,6 +8,7 @@ const useAuth = () => {
   if (_user) {
     user = JSON.parse(_user);
   }
+
   if (user) {
     return {
       auth: true,

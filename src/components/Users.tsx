@@ -22,15 +22,15 @@ function Users() {
   }, []);
   return (
     <div className="users">
-      <h2>All Users</h2>
+      <h1>All Users</h1>
       <div className="users__list">
         {users &&
           users.map((user) => (
             <div className="users__card">
               <p> Name: {user.name} </p>
-              <p> Name: {user.email} </p>
-              <p> Name: {user.phone} </p>
-              <p> Name: {user.website} </p>
+              <p> Email: {user.email} </p>
+              <p> Phone: {user.phone} </p>
+              <p> Website: {user.website} </p>
             </div>
           ))}
       </div>

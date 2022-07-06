@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 
 .app {
   display: flex;
@@ -14,7 +17,7 @@
   background-color: #365262;
   color: white;
   padding: 200px 20px 20px 20px;
-  height: 100vh;
+  height: 300vh;
 }
 .sidebar__items {
   display: flex;
@@ -41,9 +44,9 @@ h2 {
   color: #365262 !important;
   /* color: #a2a2a2; */
 }
-.sidebar_active a {
+/* .sidebar_active a {
   text-decoration: underline !important;
-}
+} */
 .inner-content {
   padding-top: 70px;
   padding-left: 40px;
@@ -64,4 +67,10 @@ h2 {
   padding-top: 70px;
   padding-left: 40px;
   line-height: 1.8rem;
+}
+.users__card {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #365262;
+  border-radius: 10px;
 }

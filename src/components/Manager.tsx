@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-function Sidebar() {
+function Manager() {
   const useAuth = () => {
     const user = localStorage.getItem("user");
     if (user) {
@@ -27,7 +27,7 @@ function Sidebar() {
           <>
             <Link to="/dashboard">Dashboard</Link>
             <Link to="/tabs">Tabs</Link>
-            <Link to="/settings">Settings</Link>
+            {/* <Link to="/settings">Settings</Link> */}
             <Link to="/users">Users</Link>
 
             {location.pathname !== "/login" && (
@@ -45,12 +45,12 @@ function Sidebar() {
             )}
           </>
         )}
-        {!user && <Link to="/login">Admin</Link>}
-        {!user && <Link to="/login">Manager</Link>}
-        {!user && <Link to="/login">Users</Link>}
+        {/* {!user && <Link to="/login">Admin</Link>} */}
+        {/* {!user && <Link to="/login">Manager</Link>} */}
+        {/* {!user && <Link to="/login">Users</Link>} */}
       </div>
     </div>
   );
 }
 
-export default Sidebar;
+export default Manager;

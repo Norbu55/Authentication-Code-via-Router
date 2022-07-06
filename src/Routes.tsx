@@ -28,13 +28,12 @@ function MainRoutes() {
             <Route path="/tabs" element={<Navigate replace to="tab1" />} />
             <Route path="tab1" element={<Tab1 />} />
             <Route
-              path="tab2"
-              element={<ProtectedRoutes roleRequired="USER" />}
+              path="/tabs"
+              element={<ProtectedRoutes roleRequired="ADMIN" />}
             >
-              <Route path="/tabs/tab2" element={<Tab2 />} />
+              <Route path="tab2" element={<Tab2 />} />
+              <Route path="tab3" element={<Tab3 />} />
             </Route>
-
-            <Route path="tab3" element={<Tab3 />} />
           </Route>
           <Route path="settings" element={<Settings />} />
           <Route path="users" element={<Users />} />
@@ -44,6 +43,7 @@ function MainRoutes() {
       </Route>
       <Route path="login" element={<PublicRoutes />}>
         <Route path="/login" element={<Login />} />
+        {/* <Route path='/' */}
       </Route>
       <Route path="/denied" element={<PermissionDenied />} />
     </Routes>
